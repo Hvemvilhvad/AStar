@@ -24,7 +24,7 @@ namespace Astar
         }
         public Edge(Node fromNode, Node toNode, float weight)
         {
-            FromNode = fromNode
+            FromNode = fromNode;
             FromNode.AddEdge(this);
             ToNode = toNode;
             Length = FromNode.DistanceTo(ToNode);
