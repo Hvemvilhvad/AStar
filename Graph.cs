@@ -188,7 +188,7 @@ namespace Astar
             Node currentNode = startNode;
             successful = true;
 
-            while (currentNode != endNode)// if current node is the final node.
+            while (currentNode != endNode)// stops if current node is the final node.
             {
                 // for each edge
                 foreach (Edge edge in currentNode.Edges)
@@ -267,7 +267,6 @@ namespace Astar
 
 
         /// <summary>
-        /// Not even sure if this shit works ima be honest.
         /// Finds a path from <paramref name="startNode"/> to a <see cref="Node"/> that is a given <paramref name="distance"/> or farther away from the <paramref name="escapeNode"/> using the AStar algorithm.
         /// </summary>
         /// <param name="startNode">The starting <see cref="Node"/>.</param>
@@ -283,7 +282,7 @@ namespace Astar
             Node currentNode = startNode;
             successful = true;
 
-            while (currentNode.DistanceTo(escapeNode) <= distance)// if current node is the final node.
+            while (currentNode.DistanceTo(escapeNode) <= distance)// stops if current node is the final node.
             {
                 // for each edge
                 foreach (Edge edge in currentNode.Edges)
@@ -352,7 +351,6 @@ namespace Astar
         }
 
         /// <summary>
-        /// Not even sure if this shit works ima be honest.
         /// Finds a path from <paramref name="startCoord"/> to a <see cref="Node"/> that is a given <paramref name="distance"/> or farther away from the <paramref name="escapeCoord"/> using the AStar algorithm.
         /// </summary>
         /// <param name="startCoord">The coordinates of the starting <see cref="Node"/>.</param>

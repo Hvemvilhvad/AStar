@@ -5,8 +5,8 @@ namespace Astar
 {
     public class Node
     {
-        private int x;
-        private int y;
+        private readonly int x;
+        private readonly int y;
         private List<Edge> edges;
 
         public int X { get => x; }

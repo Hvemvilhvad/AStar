@@ -22,13 +22,9 @@ namespace Astar
             Length = length;
             Weight = weight;
         }
-        public Edge(Node fromNode, Node toNode, float weight)
+        public Edge(Node fromNode, Node toNode, float weight) : this(fromNode, toNode, fromNode.DistanceTo(toNode), weight)
         {
-            FromNode = fromNode;
-            FromNode.AddEdge(this);
-            ToNode = toNode;
-            Length = FromNode.DistanceTo(ToNode);
-            Weight = weight;
+
         }
 
         public override string ToString()
