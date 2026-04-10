@@ -182,7 +182,6 @@ namespace Astar
 
         public LinkedList<Node> AStar(Node startNode, Node endNode, out bool successful)
         {
-            //starting shit
             //        child, parent
             Dictionary<Node, Node> closedList = new Dictionary<Node, Node>() { { startNode, startNode } };
             Dictionary<Node, (Node parent, float currentDistance)> openList = new Dictionary<Node, (Node, float)>() { { startNode, (startNode, 0) } };
@@ -278,7 +277,6 @@ namespace Astar
         /// <returns>A <see cref="LinkedList{Node}"/> containing the <see cref="Node"/>'s in the order they are travled through.</returns>
         public static LinkedList<Node> AwayStar(Node startNode, Node escapeNode, float distance, out bool successful)
         {
-            //starting shit
             //        child, parent
             Dictionary<Node, Node> closedList = new Dictionary<Node, Node>() { { startNode, startNode } };
             Dictionary<Node, (Node parent, float currentDistance)> openList = new Dictionary<Node, (Node, float)>() { { startNode, (startNode, 0) } };
